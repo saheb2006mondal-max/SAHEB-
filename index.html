@@ -2,32 +2,571 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Happy Girlfriend Day ❤️</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#b99a83">
+<title>For My Birthday Girl ♡</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&family=DM+Serif+Display&family=Playfair+Display:wght@500;600&family=Sacramento&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{overflow:hidden;height:100vh;display:flex;justify-content:center;align-items:center;font-family:Poppins,sans-serif;background:radial-gradient(circle at top,#ffd6e7 0%,transparent 40%),radial-gradient(circle at bottom right,#ff8fab 0%,transparent 35%),linear-gradient(-45deg,#120b20,#24133a,#522258,#b83280,#ff7eb3,#ffd6e7);background-size:600% 600%;animation:bg 28s ease infinite}
-@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
-.book{width:90%;max-width:900px;height:86vh;position:relative;perspective:2000px}
-.page{position:absolute;width:100%;height:100%;background:rgba(255,255,255,.1);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.25);border-radius:25px;padding:45px;color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;transition:.8s}
-.page:not(.active){opacity:0;transform:rotateY(-90deg);pointer-events:none}
-.page.active{opacity:1;transform:rotateY(0)}
-h1{font-family:"Great Vibes",cursive;font-size:64px}h2{font-family:"Cormorant Garamond",serif;font-size:36px}.quote{margin-top:18px;font-style:italic}
-button{margin-top:30px;padding:14px 35px;border:none;border-radius:40px;cursor:pointer}
-.heart,.petal{position:absolute;pointer-events:none;animation:rise linear infinite}
-@keyframes rise{0%{transform:translateY(120vh) rotate(0) scale(.8);opacity:0}10%{opacity:.8}50%{opacity:1}100%{transform:translateY(-140vh) rotate(720deg) scale(1.2);opacity:0}}
-</style></head><body>
-<div class="book">
-<div class="page active"><h1>Dear, My Love ❤️</h1><p>Happy Girlfriend Day to the most beautiful girl of my life.<br><br>From strangers...<br>to best Cousin...<br>to soulmates...<br><br>Every moment with you has become my favorite memory.<br><br>Today, I don't just celebrate Girlfriend Day...<br>I celebrate YOU.<br><br>The girl who turned my ordinary life into something magical.</p><button onclick="nextPage()">Open Our Journey ✨</button></div>
-<div class="page"><h2>Our Beautiful 10 Months 🌸</h2><p>Can you believe it?<br><br>It's been <b>10 beautiful months</b> already.<br><br>10 months of laughter.<br>10 months of late-night talks.<br>10 months of understanding.<br>10 months of missing each other.<br>10 months of choosing each other every single day.<br><br>Every day with you feels like a blessing.<br><br>And if these 10 months were this beautiful...<br><br>I can't wait to spend forever with you.</p><button onclick="nextPage()">Next ❤️</button></div>
-<div class="page"><h2>Things I Love About You 🤍</h2><p>• Your smile heals my worst days.<br>• Your voice feels like home.<br>• Your eyes tell stories words never can.<br>• Your kindness makes me proud.<br>• Your love makes me stronger.<br>• Your existence makes my world complete.<br><br>You aren't just someone I love...<br>You are my peace.</p><button onclick="nextPage()">Continue 💖</button></div>
-<div class="page"><h2>For You ✨</h2><p>"I found my favorite place when I found your heart."<br><br>"You are my today, my tomorrow and every forever."<br><br>"If I had one wish, I'd choose you again."<br><br>"My favorite notification will always be your message."<br><br>"Distance may separate us, but nothing can separate our hearts."<br><br>"I never believed in forever until I met you."<br><br>"You are the calm after every storm."<br><br>"You are my safest place."<br><br>"You are my once-in-a-lifetime kind of love."</p><button onclick="nextPage()">One Last Page 🌹</button></div>
-<div class="page"><h1>Happy Girlfriend Day ❤️</h1><p>Thank you for every smile.<br>Thank you for every moment.<br>Thank you for every memory.<br>Thank you for loving me.<br>Thank you for staying.<br><br>I promise I'll keep choosing you, respecting you, understanding you and loving you forever.<br><br><b>Forever Yours,<br>§ynta*❤️</b></p><div class="quote">"Home isn't a place anymore... it's you."</div></div>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden}
+
+body{
+  color:#302522;
+  font-family:'Cormorant Garamond',serif;
+  display:flex;align-items:center;justify-content:center;
+  transition:background 1.8s ease;
+  background:#b99a83;
+}
+
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;
+  background:
+    radial-gradient(circle at 15% 12%,rgba(255,255,255,.38),transparent 28%),
+    radial-gradient(circle at 85% 80%,rgba(70,38,25,.18),transparent 35%),
+    repeating-linear-gradient(0deg,rgba(60,35,20,.035) 0 1px,transparent 1px 4px);
+  mix-blend-mode:multiply;
+}
+
+.paper{
+  width:min(94vw,900px);height:min(94vh,860px);
+  position:relative;overflow:hidden;
+  border:1px solid rgba(73,45,32,.18);border-radius:8px;
+  box-shadow:0 22px 70px rgba(40,22,15,.32),inset 0 0 80px rgba(90,55,35,.12);
+  background:rgba(247,233,207,.78);
+  backdrop-filter:blur(2px);
+}
+
+.paper:after{
+  content:"";position:absolute;inset:13px;
+  border:1px solid rgba(78,48,33,.13);
+  pointer-events:none;border-radius:4px;
+}
+
+.page{
+  position:absolute;inset:0;padding:46px 38px 78px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;opacity:0;visibility:hidden;
+  transform:translateX(38px) scale(.985);
+  transition:opacity .65s ease,transform .65s ease,visibility .65s;
+}
+
+.page.active{opacity:1;visibility:visible;transform:none}
+
+.eyebrow{
+  font-family:'Playfair Display',serif;text-transform:uppercase;
+  letter-spacing:.26em;font-size:10px;opacity:.62;margin-bottom:18px;
+}
+
+h1{font-family:'Allura',cursive;font-weight:400;font-size:clamp(64px,10vw,94px);line-height:.9}
+h2{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(28px,5vw,48px);line-height:1.08}
+
+.script{font-family:'Sacramento',cursive;font-size:38px}
+
+.subtitle{
+  max-width:650px;margin-top:20px;font-size:clamp(17px,2.25vw,22px);
+  line-height:1.48;
+}
+
+.divider{
+  display:flex;align-items:center;gap:12px;margin:18px 0;color:#815348;
+}
+
+.divider:before,.divider:after{
+  content:"";height:1px;width:72px;background:currentColor;opacity:.35;
+}
+
+.heartBtn{
+  width:78px;height:78px;border-radius:50%;
+  border:1px solid rgba(102,62,47,.28);
+  background:rgba(255,246,226,.72);color:#713b43;
+  display:grid;place-items:center;font-size:34px;
+  box-shadow:0 10px 25px rgba(77,43,27,.15),inset 0 0 15px rgba(255,255,255,.7);
+  cursor:pointer;transition:.25s;z-index:10;
+}
+
+.heartBtn:hover{transform:scale(1.07) rotate(-4deg)}
+.heartBtn:active{transform:scale(.9)}
+
+.hint{
+  font-size:11px;letter-spacing:.17em;text-transform:uppercase;
+  opacity:.55;margin-top:11px;
+}
+
+.quote{
+  max-width:650px;min-height:92px;margin:20px auto 12px;
+  font-family:'Allura',cursive;font-size:clamp(34px,5vw,54px);
+  line-height:1.03;opacity:0;transform:translateY(12px) scale(.96);
+  transition:.55s;
+}
+
+.quote.show{opacity:1;transform:none}
+
+.photoFrame{
+  width:min(74vw,390px);padding:11px 11px 34px;
+  background:#eee0c5;box-shadow:0 15px 32px rgba(62,37,23,.25);
+  transform:rotate(-2deg);position:relative;
+}
+
+.photoFrame img{
+  display:block;width:100%;height:min(49vh,470px);
+  object-fit:cover;object-position:center;
+  filter:sepia(.05) contrast(.98);
+}
+
+.caption{
+  position:absolute;left:0;right:0;bottom:6px;
+  font-family:'Allura',cursive;font-size:28px;
+}
+
+.counter{
+  display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
+  margin:24px 0;
+}
+
+.time{
+  min-width:78px;padding:11px 12px;
+  border:1px solid rgba(100,65,47,.18);
+  background:rgba(255,245,224,.42);
+}
+
+.time b{
+  display:block;font-family:'Playfair Display',serif;font-size:28px;
+}
+
+.time span{
+  font-size:9px;letter-spacing:.16em;text-transform:uppercase;opacity:.58;
+}
+
+.final{max-width:650px;font-size:20px;line-height:1.55}
+
+.signature{
+  font-family:'Allura',cursive;font-size:40px;margin-top:22px;
+}
+
+.nav{
+  position:absolute;bottom:19px;left:0;right:0;
+  display:flex;justify-content:center;align-items:center;
+  gap:8px;z-index:12;
+}
+
+.nav button{
+  border:1px solid rgba(91,58,44,.2);
+  background:rgba(240,220,190,.68);
+  color:#3d2a24;border-radius:22px;padding:7px 14px;
+  font-family:'Playfair Display',serif;font-size:10px;
+  letter-spacing:.1em;cursor:pointer;
+}
+
+.pageNo{
+  font-size:10px;letter-spacing:.18em;opacity:.45;padding:0 7px;
+}
+
+.float{
+  position:absolute;top:-30px;left:var(--left);z-index:5;
+  pointer-events:none;font-size:var(--size);opacity:.5;
+  animation:fall var(--dur) linear forwards;
+}
+
+@keyframes fall{
+  to{transform:translateY(105vh) rotate(480deg);opacity:0}
+}
+
+.burst{
+  position:fixed;left:50%;top:50%;z-index:100;
+  pointer-events:none;font-size:22px;
+  animation:burst 1.05s ease-out forwards;
+}
+
+@keyframes burst{
+  0%{transform:translate(-50%,-50%) scale(.35);opacity:1}
+  100%{
+    transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y)))
+    scale(1.5) rotate(35deg);opacity:0
+  }
+}
+
+/* Background music controls */
+.music-player{
+  position:fixed;width:1px;height:1px;left:-10px;top:-10px;
+  overflow:hidden;opacity:0;pointer-events:none;
+}
+
+.music-toggle{
+  position:absolute;right:18px;top:18px;width:38px;height:38px;
+  border:1px solid rgba(91,58,44,.20);border-radius:50%;
+  background:rgba(255,246,226,.68);color:#5b3a31;font-size:18px;
+  display:grid;place-items:center;cursor:pointer;z-index:20;
+  box-shadow:0 5px 14px rgba(77,43,27,.12);
+  transition:transform .2s ease,background .2s ease;
+}
+
+.music-toggle:hover{transform:scale(1.08)}
+.music-toggle.playing{background:rgba(255,246,226,.9)}
+
+@media(max-width:600px){
+  .page{padding:28px 21px 65px}
+  .photoFrame{width:min(84vw,340px)}
+  .photoFrame img{height:41vh}
+  .time{min-width:67px}
+  .time b{font-size:24px}
+  .divider:before,.divider:after{width:38px}
+}
+
+/* ───────────── SPECIAL GIFT PAGE ───────────── */
+.gift-page{overflow:hidden}
+
+.gift-wrap{
+  position:relative;
+  width:190px;height:175px;
+  margin:12px 0 18px;
+  display:grid;place-items:center;
+  filter:drop-shadow(0 18px 25px rgba(76,42,30,.2));
+}
+
+.gift-box{
+  position:absolute;
+  width:138px;height:100px;
+  bottom:5px;
+  border-radius:5px 5px 10px 10px;
+  background:linear-gradient(145deg,#b86f72,#8f4b56);
+  box-shadow:inset 8px 0 18px rgba(255,255,255,.16),
+             inset -10px -8px 18px rgba(62,20,25,.14);
+  cursor:pointer;
+  transition:.35s ease;
+}
+
+.gift-box:before{
+  content:"";position:absolute;left:55px;top:0;
+  width:27px;height:100%;
+  background:linear-gradient(90deg,#f3d6a6,#c99a61,#f1d3a1);
+}
+
+.gift-lid{
+  position:absolute;
+  width:154px;height:34px;
+  left:18px;top:28px;
+  border-radius:6px;
+  background:linear-gradient(145deg,#ca7e7e,#984f59);
+  box-shadow:0 8px 12px rgba(62,30,25,.18);
+  z-index:4;
+  cursor:pointer;
+  transform-origin:center bottom;
+  transition:transform .8s cubic-bezier(.2,.8,.2,1);
+}
+
+.gift-lid:after{
+  content:"";position:absolute;left:62px;top:0;
+  width:28px;height:100%;
+  background:linear-gradient(90deg,#f3d6a6,#c99a61,#f1d3a1);
+}
+
+.ribbon-loop{
+  position:absolute;z-index:5;
+  width:52px;height:28px;
+  border:7px solid #d7b16f;
+  border-radius:50% 50% 10% 50%;
+  top:4px;left:40px;
+  transform:rotate(-18deg);
+}
+
+.ribbon-loop.right{
+  left:83px;transform:scaleX(-1) rotate(-18deg);
+}
+
+.gift-page.open .gift-lid{
+  transform:translateY(-48px) rotate(-7deg);
+}
+
+.gift-page.open .gift-box{
+  transform:translateY(5px);
+}
+
+.gift-message{
+  position:absolute;
+  left:50%;top:-7px;
+  width:145px;
+  transform:translate(-50%,20px) scale(.4);
+  opacity:0;
+  pointer-events:none;
+  z-index:2;
+  transition:.8s .15s cubic-bezier(.2,.8,.2,1);
+}
+
+.gift-page.open .gift-message{
+  transform:translate(-50%,-70px) scale(1);
+  opacity:1;
+}
+
+.gift-card{
+  background:#fff5df;
+  border:1px solid rgba(104,64,44,.18);
+  padding:13px 10px;
+  border-radius:5px;
+  box-shadow:0 8px 25px rgba(70,38,25,.18);
+  font-family:'Allura',cursive;
+  font-size:25px;
+  line-height:1.05;
+}
+
+.gift-card small{
+  display:block;
+  margin-top:7px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;
+  letter-spacing:.08em;
+}
+
+.gift-note{
+  max-width:590px;
+  font-size:clamp(16px,2.1vw,20px);
+  line-height:1.45;
+}
+
+.gift-open-hint{
+  margin-top:10px;
+  font-size:10px;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+  opacity:.55;
+}
+
+.sparkle{
+  position:absolute;
+  pointer-events:none;
+  color:#d1a45f;
+  animation:sparkle 1.8s ease-in-out infinite;
+}
+
+.s1{left:18%;top:22%;font-size:17px}
+.s2{right:16%;top:35%;font-size:13px;animation-delay:.4s}
+.s3{left:25%;bottom:10%;font-size:11px;animation-delay:.8s}
+.s4{right:24%;bottom:8%;font-size:18px;animation-delay:1.1s}
+
+@keyframes sparkle{
+  0%,100%{opacity:.2;transform:scale(.7) rotate(0)}
+  50%{opacity:1;transform:scale(1.25) rotate(25deg)}
+}
+
+/* elegant glow */
+.paper.glow{
+  animation:paperGlow 2.8s ease-in-out infinite;
+}
+@keyframes paperGlow{
+  0%,100%{box-shadow:0 22px 70px rgba(40,22,15,.32),inset 0 0 80px rgba(90,55,35,.12)}
+  50%{box-shadow:0 22px 75px rgba(82,40,45,.38),inset 0 0 95px rgba(255,215,185,.24)}
+}
+</style>
+</head>
+
+<body>
+<main class="paper" id="paper">
+
+<section class="page active">
+  <div class="eyebrow">A Little Piece Of My Heart</div>
+  <h1>Happy Birthday<br>My Love ♡</h1>
+  <div class="divider">✦ ♡ ✦</div>
+  <p class="subtitle">
+    Happy birthday to the most special person in my life!<br><br>
+    Distance may keep us in different places, but it can never make you less close to my heart.
+  </p>
+  <p class="script">10 • 08 •</p>
+  <p class="quote">“If I had to choose again, I'd still choose you — in every lifetime.”</p>
+  <button class="heartBtn" onclick="heartTap()" aria-label="Open birthday surprise">♡</button>
+  <p class="hint">tap the heart • a little surprise awaits</p>
+</section>
+
+<section class="page">
+  <div class="eyebrow">A promise from far away</div>
+  <h2>For Every Overthinking Night</h2>
+  <div class="divider">♡</div>
+  <p class="subtitle">
+    I know sometimes your mind gets too loud and makes you question everything.
+    So remember this: you never have to fight those thoughts alone.
+  </p>
+  <p class="quote">“When your mind says ‘what if?’, let my love answer: ‘I'm still here.’”</p>
+  <p class="script">No matter the distance. No matter the situation.</p>
+  <button class="heartBtn" onclick="heartTap()" aria-label="Show love">♡</button>
+</section>
+
+<section class="page">
+  <div class="photoFrame">
+    <!-- Keep your original photo/base64 here if you want the photo page. -->
+    <img src="xyz.jpeg" alt="xyz"
+         style="background:linear-gradient(145deg,#d9bda8,#f2dfc6);">
+    <div class="caption">My Favourite place♡</div>
+  </div>
+  <p class="script" style="margin-top:18px">.</p>
+</section>
+
+<section class="page gift-page" id="giftPage">
+  <div class="eyebrow">Maybe This Only A Picture,But For Me It Holds A Whole Felling--You</div>
+  <h2>Your Birthday Gift ♡</h2>
+  <div class="divider">✦ ♡ ✦</div>
+
+  <div class="gift-wrap" onclick="openGift()" role="button" tabindex="0" aria-label="Open birthday gift">
+    <span class="sparkle s1">✦</span>
+    <span class="sparkle s2">♡</span>
+    <span class="sparkle s3">✧</span>
+    <span class="sparkle s4">✦</span>
+
+    <div class="gift-message">
+      <div class="gift-card">
+        For You, Always ♡
+        <small>Open your heart & keep smiling.</small>
+      </div>
+    </div>
+
+    <div class="gift-box"></div>
+    <div class="gift-lid"></div>
+    <div class="ribbon-loop"></div>
+    <div class="ribbon-loop right"></div>
+  </div>
+
+  <p class="gift-note">
+    You are not just a part of my life — you are one of the most beautiful reasons
+    I smile, dream, and believe in forever.
+  </p>
+  <p class="script" style="margin-top:10px">Love You, Always And Forever 💖😭🫶🏻</p>
+  <p class="gift-open-hint">tap the gift • something special is waiting</p>
+</section>
+
+<section class="page">
+  <div class="eyebrow">And one last thing</div>
+  <h2>My Favourite Person</h2>
+  <div class="divider">♡</div>
+  <p class="final">
+    I don't need a perfect world. I just want a world where I get to keep choosing you,
+    caring for you, laughing with you, and loving you through every version of life.
+    <br><br>
+    And One More Times Happy Birthday To My Most Favourite Person 🥹🤌
+  </p>
+  <p class="signature">Forever yours ♡</p>
+</section>
+
+<button class="music-toggle" id="musicToggle" onclick="toggleMusic()" aria-label="Toggle music">♫</button>
+
+<div class="nav">
+  <button onclick="prevPage()">‹ Prev</button>
+  <span class="pageNo" id="pageNo">01 / 05</span>
+  <button onclick="nextPage()">Next ›</button>
 </div>
+
+</main>
+
+<!-- Optional music: replace the src with your own MP3/OGG file. -->
+<audio id="music" loop preload="none">
+  <source src="hareya song.mp3.mp3"type="audio/mpeg">
+</audio>
+
 <script>
-let pages=document.querySelectorAll('.page'),current=0;
-function nextPage(){pages[current].classList.remove('active');if(current<pages.length-1){current++;pages[current].classList.add('active');}}
-for(let i=0;i<60;i++){let h=document.createElement('div');h.className='heart';h.innerHTML=['❤️','🤍','💕','💖','💗','💞'][Math.floor(Math.random()*6)];h.style.left=Math.random()*100+'vw';h.style.animationDuration=(18+Math.random()*12)+'s';h.style.fontSize=(18+Math.random()*20)+'px';document.body.appendChild(h);}
-for(let i=0;i<40;i++){let p=document.createElement('div');p.className='petal';p.innerHTML='🌸';p.style.left=Math.random()*100+'vw';p.style.animationDuration=(22+Math.random()*12)+'s';p.style.fontSize=(18+Math.random()*20)+'px';document.body.appendChild(p);}
-</script></body></html>
+const pages=[...document.querySelectorAll('.page')];
+let current=0;
+const paper=document.getElementById('paper');
+const pageNo=document.getElementById('pageNo');
+const giftPage=document.getElementById('giftPage');
+const music=document.getElementById('music');
+const musicToggle=document.getElementById('musicToggle');
+
+function showPage(index){
+  current=Math.max(0,Math.min(index,pages.length-1));
+  pages.forEach((p,i)=>p.classList.toggle('active',i===current));
+  pageNo.textContent=String(current+1).padStart(2,'0')+' / '+String(pages.length).padStart(2,'0');
+
+  if(current===0){
+    setTimeout(()=>pages[0].querySelector('.quote')?.classList.add('show'),250);
+  }
+}
+
+function nextPage(){
+  if(current<pages.length-1){
+    showPage(current+1);
+    sparkleBurst();
+  }
+}
+function prevPage(){
+  if(current>0) showPage(current-1);
+}
+
+function heartTap(){
+  document.querySelectorAll('.quote').forEach(q=>q.classList.add('show'));
+  sparkleBurst();
+  paper.classList.add('glow');
+  setTimeout(()=>paper.classList.remove('glow'),3200);
+  if(current<pages.length-1) setTimeout(nextPage,700);
+}
+
+function openGift(){
+  giftPage.classList.toggle('open');
+  sparkleBurst();
+  if(giftPage.classList.contains('open')){
+    setTimeout(()=>paper.classList.add('glow'),250);
+    setTimeout(()=>paper.classList.remove('glow'),3000);
+  }
+}
+
+function sparkleBurst(){
+  const symbols=['♡','✦','✧','♥','⋆'];
+  for(let i=0;i<18;i++){
+    const s=document.createElement('span');
+    s.className='burst';
+    s.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    s.style.setProperty('--x',(Math.random()*360-180)+'px');
+    s.style.setProperty('--y',(Math.random()*360-180)+'px');
+    s.style.animationDelay=(Math.random()*.15)+'s';
+    document.body.appendChild(s);
+    setTimeout(()=>s.remove(),1200);
+  }
+}
+
+function fallingHearts(){
+  const el=document.createElement('span');
+  el.className='float';
+  el.textContent=['♡','✦','♥','✧'][Math.floor(Math.random()*4)];
+  el.style.setProperty('--left',Math.random()*100+'%');
+  el.style.setProperty('--size',(12+Math.random()*18)+'px');
+  el.style.setProperty('--dur',(5+Math.random()*5)+'s');
+  document.querySelector('.paper').appendChild(el);
+  setTimeout(()=>el.remove(),11000);
+}
+setInterval(fallingHearts,900);
+
+async function toggleMusic(){
+  if(!music.src){
+    alert('Add your MP3 file path in the <audio> tag first, then tap ♫.');
+    return;
+  }
+  if(music.paused){
+    try{
+      await music.play();
+      musicToggle.classList.add('playing');
+      musicToggle.textContent='❚❚';
+    }catch(e){}
+  }else{
+    music.pause();
+    musicToggle.classList.remove('playing');
+    musicToggle.textContent='♫';
+  }
+}
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight') nextPage();
+  if(e.key==='ArrowLeft') prevPage();
+  if(e.key==='Enter' && current===3) openGift();
+});
+
+let startX=0;
+document.addEventListener('touchstart',e=>{startX=e.changedTouches[0].screenX},{passive:true});
+document.addEventListener('touchend',e=>{
+  const dx=e.changedTouches[0].screenX-startX;
+  if(Math.abs(dx)>55) dx<0?nextPage():prevPage();
+},{passive:true});
+
+showPage(0);
+setTimeout(()=>document.querySelector('.page.active .quote')?.classList.add('show'),900);
+</script>
+</body>
+</html>
